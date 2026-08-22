@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Tyagi — Mathematics</title>
+<meta name="description" content="Aditya Tyagi — M.Sc Mathematics, IIT Gandhinagar. Commutative algebra, algebraic geometry, algebraic number theory.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:  #F6F4EC;
+    --ink:    #201F1B;
+    --ink-soft: #57554B;
+    --cover:  #1F3D2E;
+    --brass:  #A9822F;
+    --line:   rgba(32,31,27,0.12);
+
+    --display: 'Spectral', Georgia, serif;
+    --body:    'Source Serif 4', Georgia, serif;
+    --mono:    'IBM Plex Mono', 'Courier New', monospace;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16.5px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--cover); }
+  a:hover{ color:var(--brass); }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-offset:2px; }
+
+  .wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
+
+  /* header */
+  header.top{ padding:44px 0 0; border-bottom:1px solid var(--line); }
+  .id-row{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; padding-bottom:26px; }
+  h1{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:1.9rem;
+    margin:0;
+    color:var(--cover);
+    letter-spacing:-0.01em;
+  }
+  .role{ font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:6px; }
+  .contact-row{ display:flex; gap:16px; font-family:var(--mono); font-size:12.5px; flex-wrap:wrap; }
+  .contact-row a{ border-bottom:1px solid var(--line); padding-bottom:1px; }
+
+  /* tabs */
+  nav.tabs{ display:flex; gap:2px; overflow-x:auto; }
+  nav.tabs button{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:0.03em;
+    background:none;
+    border:none;
+    cursor:pointer;
+    color:var(--ink-soft);
+    padding:12px 16px;
+    border-bottom:2px solid transparent;
+    white-space:nowrap;
+  }
+  nav.tabs button:hover{ color:var(--ink); }
+  nav.tabs button.active{ color:var(--cover); border-bottom-color:var(--brass); font-weight:500; }
+
+  main{ padding:40px 0 70px; }
+  .panel{ display:none; }
+  .panel.active{ display:block; animation:fade .25s ease; }
+  @keyframes fade{ from{ opacity:0; transform:translateY(4px);} to{ opacity:1; transform:none; } }
+
+  h2{ font-family:var(--display); font-weight:600; font-size:1.3rem; color:var(--cover); margin:0 0 18px; }
+  h3{ font-family:var(--display); font-weight:600; font-size:1.05rem; color:var(--ink); margin:0 0 4px; }
+  p{ margin:0 0 14px; color:var(--ink-soft); }
+  p.lede{ color:var(--ink); font-size:1.02rem; }
+
+  .tag-line{ font-family:var(--mono); font-size:13px; color:var(--brass); margin:0 0 20px; }
+
+  /* generic block list */
+  .block{ padding:18px 0; border-top:1px solid var(--line); }
+  .block:first-child{ border-top:none; padding-top:0; }
+  .block .meta{ font-family:var(--mono); font-size:12px; color:var(--brass); display:block; margin-bottom:6px; }
+  .block ul{ margin:6px 0 0; padding-left:18px; color:var(--ink-soft); }
+  .block ul li{ margin-bottom:4px; }
+  .block p{ margin:0; font-size:0.96rem; }
+
+  /* achievements / stats */
+  .stat-list{ list-style:none; margin:0; padding:0; }
+  .stat-list li{ display:flex; justify-content:space-between; gap:10px; padding:10px 0; border-top:1px solid var(--line); font-size:0.95rem; }
+  .stat-list li:first-child{ border-top:none; }
+  .stat-list .val{ font-family:var(--mono); color:var(--cover); font-weight:500; white-space:nowrap; }
+
+  footer{ border-top:1px solid var(--line); padding:26px 0; text-align:center; }
+  footer p{ font-family:var(--mono); font-size:11.5px; color:var(--ink-soft); margin:0; }
+
+  @media (max-width:560px){
+    .id-row{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="id-row">
+      <div>
+        <h1>Aditya Tyagi</h1>
+        <div class="role">M.Sc Mathematics — IIT Gandhinagar</div>
+      </div>
+      <div class="contact-row">
+        <a href="mailto:aditya.tyagi@iitgn.ac.in">Email</a>
+        <a href="https://github.com/glitch1729" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/aditya-tyagi-584126253/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab-btn active" data-tab="home">Home</button>
+      <button class="tab-btn" data-tab="education">Education</button>
+      <button class="tab-btn" data-tab="seminars">Seminars</button>
+      <button class="tab-btn" data-tab="research">Research</button>
+      <button class="tab-btn" data-tab="personal">Personal</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HOME -->
+  <section class="panel active" id="home">
+    <p class="tag-line">Commutative Algebra · Algebraic Geometry · Algebraic Number Theory</p>
+    <p class="lede">I'm an M.Sc Mathematics student at IIT Gandhinagar (2024–2026), applying to PhD programs in mathematics. Before this I completed my B.Sc in Mathematics at Banaras Hindu University.</p>
+    <p>My current work spans a master's thesis on homology groups and homotopy invariants, an ongoing collaboration on quasi-cyclic codes over ℤ₄, and a couple of Macaulay2 packages — details under the Research tab.</p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="panel" id="education">
+    <h2>Education</h2>
+
+    <div class="block">
+      <h3>M.Sc in Mathematics</h3>
+      <span class="meta">IIT Gandhinagar · 2024–2026 · CPI 8.50/10 (through 3rd semester)</span>
+      <p>Completed: Algebra I (Groups & Rings), Algebra II (Modules & Galois Theory), Real Analysis, Complex Analysis, Topology, Linear Algebra, Commutative Algebra, Real Analysis of Several Variables, ODEs, Algebraic Topology, Measure Theory, Numerical Analysis.</p>
+      <p>Current semester: Commutative Algebra II, Matrix Analysis, Differential Topology, Modular Forms, Algebraic Number Theory.</p>
+    </div>
+
+    <div class="block">
+      <h3>B.Sc in Mathematics</h3>
+      <span class="meta">Banaras Hindu University · 2021–2024 · CPI 7.58/10</span>
+    </div>
+
+    <div class="block">
+      <h3>Schooling</h3>
+      <span class="meta">Rao Man Singh Public School, Delhi</span>
+      <p>12th Standard (2020–2021) — 95% &nbsp;·&nbsp; 10th Standard (2018–2019) — 85%</p>
+    </div>
+
+    <div class="block">
+      <h3>Achievements</h3>
+      <ul class="stat-list">
+        <li><span>CSIR NET (Lectureship)</span><span class="val">AIR 34 — Dec 2025</span></li>
+        <li><span>GATE — Mathematics</span><span class="val">AIR 295 — Feb 2026</span></li>
+        <li><span>IIT JAM — Mathematics</span><span class="val">AIR 383 — Feb 2024</span></li>
+        <li><span>Academic excellence prize, 12th standard</span><span class="val">Dec 2022</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SEMINARS -->
+  <section class="panel" id="seminars">
+    <h2>Seminars & talks</h2>
+
+    <div class="block">
+      <h3>Attended</h3>
+      <ul>
+        <li>SPIM, HRI Prayagraj — Galois & module theory, algebraic topology, differential geometry (Jun 2025)</li>
+        <li>Seminar series on algebraic curves, IIT Gandhinagar — affine varieties and plane curves (Oct–Nov 2025)</li>
+        <li>Graduate seminar talk on modular forms, IIT Gandhinagar (Nov 2025)</li>
+        <li>GANIT Symposium, IIT Gandhinagar — connections among algebraic geometry, commutative algebra, and number theory (Jan 2026)</li>
+        <li>Graduate seminar talk on commutative algebra & graph theory, IIT Gandhinagar (Mar 2026)</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h3>Presented</h3>
+      <ul>
+        <li>Topological groups and orbit spaces, IIT Gandhinagar (Oct 2025)</li>
+        <li>Valuation rings, IIT Gandhinagar (Nov 2025)</li>
+        <li>Generalised Ramanujan formulas of the Riemann zeta function at odd values, IIT Gandhinagar (Apr 2026)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="panel" id="research">
+    <h2>Research</h2>
+
+    <div class="block">
+      <h3>M.Sc thesis — Homology groups & homotopy invariants</h3>
+      <span class="meta">Advised by Prof. Sanjay Amrutiya, IIT Gandhinagar</span>
+      <p>Independent study on homology groups of spaces such as the torus and Möbius strip, and the relationship between homotopy and homology — covering the homotopy invariance theorem, long exact sequences, and Mayer–Vietoris, with applications including Brouwer's fixed point theorem.</p>
+      <p><a href="Aditya_Tyagi_MSc_Thesis.pdf" target="_blank" rel="noopener">Read the full thesis (PDF) →</a></p>
+    </div>
+
+    <div class="block">
+      <h3>Ongoing — Quasi-cyclic codes over ℤ₄</h3>
+      <span class="meta">With Prof. Noah Aydin, Kenyon College</span>
+      <p>A local-to-global criterion for when 1-generator quasi-cyclic codes over ℤ₄ preserve their seed's module type — currently being extended from odd to even length. Manuscript in preparation for journal submission.</p>
+    </div>
+
+    <div class="block">
+      <h3>HomotopyContinuationInterface</h3>
+      <span class="meta">Macaulay2 package · suggested by Paul Breiding, Universität Osnabrück</span>
+      <p>Interfaces Macaulay2 with HomotopyContinuation.jl for numerically solving polynomial systems, in the style of the Bertini and PHCpack interfaces.</p>
+    </div>
+
+    <div class="block">
+      <h3>OnePointAGCodes</h3>
+      <span class="meta">Macaulay2 package</span>
+      <p>Constructs one-point algebraic geometry (Goppa) codes on arbitrary smooth curves via generic Riemann–Roch machinery, validated on Hermitian and Klein quartic curves.</p>
+    </div>
+  </section>
+
+  <!-- PERSONAL -->
+  <section class="panel" id="personal">
+    <h2>Personal</h2>
+    <p>Outside math, I'm a big cricket fan and enjoy comedy shows — my favourites are <em>Taarak Mehta Ka Ooltah Chashma</em> and <em>F.I.R.</em></p>
+    <p>I also play chess. My chess.com username is <strong>adityatyagi-007</strong> — send me a game request if you're into chess too.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Aditya Tyagi · aditya.tyagi@iitgn.ac.in · tyagiaditya1729@gmail.com</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
